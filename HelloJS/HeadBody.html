@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			function myFunction() {
+				document.getElementById("demo").innerHTML = "Paragraph changed.";
+			}
+		</script>
+		<title>Beggining JS</title>
+	</head>
+	<body>
+		<h1>My Web Page</h1>
+		<p id="demo">A paragraph</p>
+		<button type="button" onclick="myFunction()">Try it</button>
+
+		<p id="demo2">A second paragraph.</p>
+		<button type="button" onclick="my2ndFunction()">Try it twice</button>
+
+		<script>
+			function my2ndFunction() {
+				document.getElementById("demo2").innerHTML = "Second change.";
+			}
+		</script>
+	</body>
+</html> 
