@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Input Types</title>
+	</head>
+	<body>
+		<form>
+			Quantity (between 1 and 5):
+			<input type="number" name="quantity" min="1" max="5">
+		</form>
+
+		<form>
+			Quantity:
+			<input type="number" name="points" min="0" max="100" step="10" value="30">
+		</form>
+
+		<form>
+			Enter a date before 01-01-1980:
+			<input type="date" name="bday1" max="1979-12-31"><br>
+			Enter a date after 01-01-2000:
+			<input type="date" name="bday2" min="2000-01-02"><br>
+			<input type="submit" value="Send">
+		</form>
+
+		<form>
+			Select your favorite color:
+			<input type="color" name="favcolor">
+		</form>
+
+		<form>
+			<input type="range" name="points2" min="0" max="10">
+		</form>
+
+		<form>
+			Birthday (month and year):
+			<input type="month" name="bdayMonth">
+		</form>
+
+		<form>
+			Select time:
+			<input type="time" name="urs_time">
+		</form>
+
+		<form>
+			Birthday (date and time):
+			<input type="datetime" name="bdaytime">
+		</form>
+
+		<form>
+			Birthday (date and time):
+			<input type="datetime-local" name="bdaytimelocal">
+		</form>
+
+		<form>
+			Email:
+			<input type="email" name="email">
+		</form>
+
+		<form>
+			Search:
+			<input type="search" name="googlesearch">
+		</form>
+
+		<form>
+			Url:
+			<input type="url" name="url">
+		</form>
+	</body>
+</html>
