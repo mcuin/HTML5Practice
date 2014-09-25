@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Canvas</title>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+		<canvas id="textCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+		<canvas id="gradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
+		<canvas id="rgradient" width="200" height="100" style="border:1px solid #000000;"></canvas>
+		<img id="scream" src="img_the_scream.jpg" width="220" height="277">
+		<canvas id="image" width="250" height="300" style="border:1px solid #d3d3d3;">
+		
+		<script>
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0, 0, 150, 75);
+			ctx.moveTo(0, 0);
+			ctx.lineTo(200,100);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(95, 50, 40, 0, 2*Math.PI);
+			ctx.stroke();
+
+			var c2 = document.getElementById("textCanvas");
+			var ctx2 = c2.getContext("2d");
+			ctx2.font="30px Arial";
+			ctx2.fillText("Hello World!", 10, 50);
+			ctx2.strokeText("Hello World!", 20, 60);
+
+			var c3 = document.getElementById("gradient");
+			var ctx3 = c3.getContext("2d");
+			var grad = ctx3.createLinearGradient(0, 0, 200, 0);
+			grad.addColorStop(0, "red");
+			grad.addColorStop(1, "white");
+			ctx3.fillStyle = grad;
+			ctx3.fillRect(10, 10, 150, 80);
+
+			var c4 = document.getElementById("rgradient");
+			var ctx4 = c4.getContext("2d")
+			var grad2 = ctx4.createRadialGradient(75, 50, 5, 90, 60, 100);
+			grad2.addColorStop(0, "red");
+			grad2.addColorStop(1, "white");
+			ctx4.fillStyle = grad2;
+			ctx4.fillRect(10, 10, 150, 80);	
+
+			var c5 = document.getElementById("image");
+			var ctx5 = c5.getContext("2d");
+			var img = document.getElementById("scream");
+			ctx5.drawImage(img, 10, 10); 
+		</script>
+
+	</body>
+</html>
