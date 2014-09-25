@@ -17,7 +17,31 @@
 			<input type="submit">
 		</form>	
 
-		First Name: <input type="text" name="fist2" autofocus>
+		First Name: <input type="text" name="first2" autofocus>
 		
+		<form "demo_form2.asp>
+			First Name: <input type="text" name="first3">
+			Last Name: <input type="text" name="last2">
+			<input type="submit" name="Submit"><br>
+			<input type="submit" formaction="demo_admin.asp" value="Submit as admin">
+		</form>
+
+		<form action="demo_post_encrypte.asp" method ="post">
+			First Name: <input type="text" name="first4">
+			Last Name: <input type="text" name="last3">
+			<input type="submit" formencrypt="multipart/form-data" value="Submit with encryption.">
+		</form>
+
+		<form action="demo_method.asp" method="get">
+			First Name: <input type="text" name="first5">
+			<input type="submit" formmethod="post" formaction="demo_post.asp" value="Submit using POST">
+		</form>
+
+		<form action="demo_target">
+			First Name: <input type="text" name="first6">
+			<input type="submit" formtarget="_blank" value="Submit to new window">
+		</form
+
+			
 	</body>
 </html>
