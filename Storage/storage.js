@@ -13,6 +13,15 @@ function setClick() {
 	} else {
 		localStorage.clickcount = 1;
 	} 
-	document.getElementById("result2").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s) in this session.";
+	document.getElementById("result2").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s) in this browser.";
+}
+
+function setSession() {
+	if (sessionStorage.clickcount) {
+		sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+	} else {
+		sessionStorage.clickcount = 1;
+	} 
+	document.getElementById("result3").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " times(s) in this session.";
 }
 
